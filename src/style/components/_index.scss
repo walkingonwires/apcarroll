@@ -1,0 +1,28 @@
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  .main {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 8rem;
+  }
+
+
+  @media only screen and (max-width: 850px) {
+    .main {
+      font-size: 5em;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .main {
+      font-size: 3em;
+    }
+  }
+}
+
+

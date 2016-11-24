@@ -1,14 +1,13 @@
 {
-  "name": "Front-End-Boilerplate",
-  "description": "Start a project with this front-end build kit",
+  "name": "apcarroll.com",
+  "description": "Personal Website",
   "license": "",
-  "repository": "",
-  "private": true,
-  "author": "Transmogrify <everyone@xmog.com>",
+  "repository": "git@github.com:walkingonwires/apcarroll.git",
+  "private": false,
+  "author": "Andrew Carroll <andrew.carroll1@gmail.com>",
   "devDependencies": {
     "browser-sync": "^2.12.10",
     "browserify": "^13.0.1",
-    "contentful": "^3.3.14",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-bust": "^0.2.2",
@@ -29,21 +28,13 @@
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5",
     "gulp-wrap": "^0.13.0",
-    "handlebars": "^4.0.5",
-    "handlebars-layouts": "^3.1.3",
-    "hbsfy": "^2.7.0",
     "imagemin-pngquant": "^5.0.0",
     "jquery": "^2.2.4",
+    "jshint": "^2.9.4",
     "page": "^1.7.1",
-    "q": "^1.4.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
   },
-  "dependencies": {},
-  "browserify": {
-    "transform": [
-      "hbsfy"
-    ]
-  }
+  "dependencies": {}
 }
