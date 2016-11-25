@@ -1,16 +1,18 @@
 // Gulp
-var gulp = require("gulp"),
+const gulp = require("gulp"),
     gulpif = require('gulp-if'),
     Bust = require('gulp-bust'),
     gutil = require('gulp-util'),
     clean = require('gulp-clean'),
     watch = require('gulp-watch'),
+    shell = require('gulp-shell'),
     uglify = require('gulp-uglify'),
     jshint = require('gulp-jshint'),
     inject = require('gulp-inject'),
     buffer = require('vinyl-buffer'),
     source = require('vinyl-source-stream'),
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps'),
+    deploy = require('./deplyConfig');
 
 // Style
 var sass = require('gulp-sass'),
@@ -162,3 +164,8 @@ gulp.task('prod', function () {
 
 gulp.task('default', ['open', 'watch']);
 gulp.task('build', ['createDist']);
+
+gulp.task('deploy', ['prod', 'build'], shell.task([
+    'surge ' + deploy.buildDestination + ' ' + deploy.productionUrl
+]));
+
