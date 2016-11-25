@@ -13,8 +13,7 @@
             if (!waitToChange) {
                 waitToChange = true;
                 _iterate();
-                $('.content').text(options[currentContent].name);
-                _bindTargetOpen();
+                _appendLink();
                 setTimeout(function () {
                     waitToChange = false;
                 }, 175)
@@ -29,16 +28,16 @@
             currentContent = (currentContent < (options.length -1)) ? currentContent+1 : 0;
         }
 
-        function _bindTargetOpen () {
-            $('body').off('click').on('click', function () {
-                if (options[currentContent].name !== 'email') {
-                    window.location.href = options[currentContent].value;
-                } else {
-                    var win = window.open(options[currentContent].value, '_blank');
-                    win.focus();
-                }
-            });
-
+        function _appendLink () {
+            var isEmail = (options[currentContent].name === 'email'),
+                mailTo =  isEmail ? 'mailto:' : '',
+                target = isEmail ? '_self' : '_blank';
+            $('.content').empty().append(
+                '<a href="' +
+                mailTo + options[currentContent].value +
+                '" target="' + target +'">' +
+                options[currentContent].name +
+                '</a>');
         }
     });
 })();

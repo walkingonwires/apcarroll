@@ -12,7 +12,7 @@
         },
         {
             name: 'codepen',
-            value: 'andrew.carroll1@gmail.com'
+            value: 'http://codepen.io/walkingonwires/'
         },
         {
             name: 'linkedIn',
