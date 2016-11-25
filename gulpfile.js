@@ -1,5 +1,5 @@
 // Gulp
-const gulp = require("gulp"),
+var gulp = require("gulp"),
     gulpif = require('gulp-if'),
     Bust = require('gulp-bust'),
     gutil = require('gulp-util'),
