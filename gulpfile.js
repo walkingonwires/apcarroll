@@ -166,6 +166,6 @@ gulp.task('default', ['open', 'watch']);
 gulp.task('build', ['createDist']);
 
 gulp.task('deploy', ['prod', 'build'], shell.task([
-    'surge ' + deploy.buildDestination + ' ' + deploy.productionUrl
+    'surge ' +  __dirname + '/dist/' + ' ' + deploy.productionUrl
 ]));
 
