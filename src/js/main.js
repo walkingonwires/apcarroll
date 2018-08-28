@@ -8,7 +8,7 @@
         var currentContent = null,
             waitToChange = false;
 
-        $(window).bind('mousewheel touchmove', function (e) {
+        $(window).bind('mousewheel touchmove DOMMouseScroll', function (e) {
             if (e) e.preventDefault();
             if (!waitToChange) {
                 waitToChange = true;
